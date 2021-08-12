@@ -1,5 +1,6 @@
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
+const circles = document.querySelectorAll('.slider-circle');
 
 function removeActiveClasses(elements) {
   elements.forEach((element) => {
@@ -52,10 +53,33 @@ function changeSliderImg(direction) {
   }
 }
 
+let setNextSlideByTimeout = setInterval(() => {
+  changeSliderImg('next');
+}, 5000);
+
+function restartSetNextSlideByTimeout() {
+  clearInterval(setNextSlideByTimeout);
+  setNextSlideByTimeout = setInterval(() => {
+    changeSliderImg('next');
+  }, 5000);
+}
+
+circles.forEach((circle) => {
+  circle.addEventListener('click', () => {
+    restartSetNextSlideByTimeout();
+    removeActiveClasses(document.querySelectorAll('.slider-img'));
+    removeActiveClasses(circles);
+    addActiveClassToEl(document.querySelector(`img[data-id="${Number(circle.dataset.id)}"]`));
+    addActiveClassToEl(circle);
+  });
+});
+
 nextBtn.addEventListener('click', () => {
+  restartSetNextSlideByTimeout();
   changeSliderImg('next');
 });
 
 prevBtn.addEventListener('click', () => {
+  restartSetNextSlideByTimeout();
   changeSliderImg('prev');
 });
