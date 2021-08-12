@@ -4,11 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="slider-container">
+        <i class="fas fa-chevron-circle-left prev"></i>
 
+        <div class="content-container">
+            <div class="imgs-container">
+                <img class="slider-img active" data-id="1"
+                    src="https://images.pexels.com/photos/3050970/pexels-photo-3050970.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                    alt="">
+                <img class="slider-img" data-id="2"
+                    src="https://images.pexels.com/photos/3040621/pexels-photo-3040621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="">
+                <img class="slider-img" data-id="3"
+                    src="https://images.pexels.com/photos/3040622/pexels-photo-3040622.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="">
+                <img class="slider-img" data-id="4"
+                    src="https://images.pexels.com/photos/3696039/pexels-photo-3696039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="">
+                <img class="slider-img" data-id="5"
+                    src="https://images.pexels.com/photos/5379684/pexels-photo-5379684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="">
+            </div>
+
+            <div class="circles-container">
+                <i class="fas fa-circle slider-circle" data-id="1"></i>
+                <i class="fas fa-circle slider-circle" data-id="2"></i>
+                <i class="fas fa-circle slider-circle" data-id="3"></i>
+                <i class="fas fa-circle slider-circle" data-id="4"></i>
+                <i class="fas fa-circle slider-circle" data-id="5"></i>
+            </div>
+        </div>
+
+
+
+        <i class="fas fa-chevron-circle-right next"></i>
+
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
