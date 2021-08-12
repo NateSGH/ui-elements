@@ -5,9 +5,15 @@
   align-items: center;
 }
 
+.fas {
+  color: #042959;
+}
+
 .prev,
 .next {
-  margin: 20px;
+  margin: 0 30px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .content-container {
@@ -31,6 +37,10 @@
   display: block;
 }
 
-.fa-circle {
+.slider-circle {
   margin: 20px 5px 10px 5px;
+}
+
+.slider-circle.active {
+  color: #c1d4d9;
 }
